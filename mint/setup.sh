@@ -18,6 +18,8 @@ flatpak install -y com.google.Chrome
 
 # Loads desktop settings
 dconf load / < dconf-settings
+# Run the following to save settings
+# dconf dump / > dconf-settings
 
 # Git config settings
 git config --global user.name "Evan Gyori"
