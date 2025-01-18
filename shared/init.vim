@@ -11,8 +11,6 @@ Plug 'https://github.com/fxn/vim-monochrome'
 
 call plug#end()
 
-colorscheme habamax
-
 nnoremap <silent> ; :TagbarToggle<CR>
 
 " Adds line below or above but does not move cursor or enter insert mode
