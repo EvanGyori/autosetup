@@ -23,6 +23,7 @@ dconf load / < dconf-settings
 git config --global user.name "Evan Gyori"
 git config --global user.email "evangyori@gmail.com"
 git config --global core.editor nvim
+git config --global alias.history "log --all --oneline --graph"
 
 # Install latest Dotnet LTS release, move to appropiate location, and put location in PATH and DOTNET_ROOT env variables
 wget https://dot.net/v1/dotnet-install.sh -O "$HOME/Downloads/dotnet-install.sh"
