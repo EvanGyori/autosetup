@@ -11,7 +11,11 @@ Plug 'https://github.com/fxn/vim-monochrome'
 
 call plug#end()
 
+set shiftwidth=4
+
 nnoremap <silent> ; :TagbarToggle<CR>
+
+let g:tagbar_sort = 0
 
 " Adds line below or above but does not move cursor or enter insert mode
 nnoremap o o<Esc>
