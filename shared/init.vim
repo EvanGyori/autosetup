@@ -11,7 +11,15 @@ Plug 'https://github.com/fxn/vim-monochrome'
 
 call plug#end()
 
+# If in Windows:
+#colorscheme habamax
+
 set shiftwidth=4
+
+# g0 - public: and private: aren't indented
+# N-s - stuff inside namespaces aren't indented
+# (s - After an unclosed parenthesis, indent one tab rather than two
+set cino=g0N-s(s
 
 nnoremap <silent> ; :TagbarToggle<CR>
 
