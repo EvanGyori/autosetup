@@ -31,3 +31,7 @@ nnoremap O O<Esc>
 
 " Make x delete an empty line
 nnoremap <silent> x :execute (getline('.') == '' ? 'normal! dd' : 'normal! x')<CR>
+
+" Only needed in Linux, test for Windows
+" Enables mouse interaction
+set mouse=a
