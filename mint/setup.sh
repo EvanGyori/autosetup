@@ -9,6 +9,7 @@ sudo apt install -y cmake
 sudo apt install -y universal-ctags
 sudo apt install -y vulkan-tools
 sudo apt install -y vulkan-validationlayers
+sudo apt install -y glslang-tools
 sudo apt install -y libglfw3-dev
 sudo apt install -y trash-cli
 sudo apt install -y steam
