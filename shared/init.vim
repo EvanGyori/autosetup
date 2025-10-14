@@ -25,7 +25,7 @@ nnoremap <silent> ; :TagbarToggle<CR>
 
 let g:tagbar_sort = 0
 
-" Adds line below or above but does not move cursor or enter insert mode
+" Adds line below or above but does not enter insert mode
 nnoremap o o<Esc>
 nnoremap O O<Esc>
 
