@@ -10,7 +10,6 @@ sudo apt install -y universal-ctags
 sudo apt install -y vulkan-tools
 sudo apt install -y vulkan-validationlayers
 sudo apt install -y glslang-tools
-sudo apt install -y libglfw3-dev
 sudo apt install -y trash-cli
 sudo apt install -y steam
 sudo apt install -y calibre
@@ -30,13 +29,27 @@ git config --global user.email "evangyori@gmail.com"
 git config --global core.editor nvim
 git config --global alias.history "log --all --oneline --graph"
 
+# Outdated version
+# sudo apt install -y libglfw3-dev
+
+# Install GLFW dependencies, install latest GLFW commit, build GLFW
+sudo apt install -y libwayland-dev libxkbcommon-dev xorg-dev
+git clone git@github.com:glfw/glfw.git "$HOME/ManualInstalls/Software/Libraries/glfw/src"
+mkdir -p "$HOME/ManualInstalls/Software/Libraries/glfw/build"
+cmake -S "$HOME/ManualInstalls/Software/Libraries/glfw/src" -B "$HOME/ManualInstalls/Software/Libraries/glfw/build" -DGLFW_BUILD_EXAMPLES=OFF -DGLFW_BUILD_TESTS=OFF -DGLFW_BUILD_DOCS=OFF
+cmake --build "$HOME/ManualInstalls/Software/Libraries/glfw/build"
+sudo cmake --install "$HOME/ManualInstalls/Software/Libraries/glfw/build"
+
+<<'DOTNET'
 # Install latest Dotnet LTS release, move to appropiate location, and put location in PATH and DOTNET_ROOT env variables
 wget https://dot.net/v1/dotnet-install.sh -O "$HOME/Downloads/dotnet-install.sh"
 chmod +x "$HOME/Downloads/dotnet-install.sh"
 mkdir -p "$HOME/ManualInstalls/Software/Console/Dotnet"
 "$HOME/Downloads/dotnet-install.sh" --install-dir "$HOME/ManualInstalls/Software/Console/Dotnet"
 trash "$HOME/Downloads/dotnet-install.sh"
+DOTNET
 
+<<'GODOT'
 # Install C# Godot v4.3, move to appropiate location, and put location in PATH evn variable
 mkdir -p "$HOME/ManualInstalls/Apps/Godot"
 wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_linux_x86_64.zip -O "$HOME/Downloads/godot.zip"
@@ -45,6 +58,7 @@ mv "$HOME/ManualInstalls/Apps/Godot/Godot_v4.3-stable_mono_linux_x86_64/Godot_v4
 mv "$HOME/ManualInstalls/Apps/Godot/Godot_v4.3-stable_mono_linux_x86_64/GodotSharp" "$HOME/ManualInstalls/Apps/Godot/GodotSharp"
 trash "$HOME/Downloads/godot.zip"
 trash "$HOME/ManualInstalls/Apps/Godot/Godot_v4.3-stable_mono_linux_x86_64"
+GODOT
 
 # Setup environment variables.
 cp .profile "$HOME/.profile"

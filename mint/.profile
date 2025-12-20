@@ -26,7 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+<<'DOTNET'
 DOTNET_ROOT="$HOME/ManualInstalls/Software/Console/Dotnet"
 PATH="$PATH:$DOTNET_ROOT"
+DOTNET
 
+<<'GODOT'
 PATH="$PATH:$HOME/ManualInstalls/Apps/Godot"
+GODOT
