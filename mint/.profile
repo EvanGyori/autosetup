@@ -26,6 +26,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+PATH="$PATH:$HOME/GlobalCommands"
+
 <<'DOTNET'
 DOTNET_ROOT="$HOME/ManualInstalls/Software/Console/Dotnet"
 PATH="$PATH:$DOTNET_ROOT"

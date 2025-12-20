@@ -2,6 +2,7 @@
 
 apt update
 apt upgrade -y
+sudo apt autoremove -y
 
 sudo apt install -y neovim
 sudo apt install -y git
@@ -39,6 +40,9 @@ mkdir -p "$HOME/ManualInstalls/Software/Libraries/glfw/build"
 cmake -S "$HOME/ManualInstalls/Software/Libraries/glfw/src" -B "$HOME/ManualInstalls/Software/Libraries/glfw/build" -DGLFW_BUILD_EXAMPLES=OFF -DGLFW_BUILD_TESTS=OFF -DGLFW_BUILD_DOCS=OFF
 cmake --build "$HOME/ManualInstalls/Software/Libraries/glfw/build"
 sudo cmake --install "$HOME/ManualInstalls/Software/Libraries/glfw/build"
+
+# Copy GlobalCommands (l and cls shorthands)
+cp -r GlobalCommands "$HOME/GlobalCommands"
 
 <<'DOTNET'
 # Install latest Dotnet LTS release, move to appropiate location, and put location in PATH and DOTNET_ROOT env variables
