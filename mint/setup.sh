@@ -18,6 +18,7 @@ sudo apt install -y mint-meta-codecs
 
 flatpak install -y com.discordapp.Discord
 flatpak install -y com.google.Chrome
+flatpak install -y com.jgraph.drawio.desktop
 
 # Loads desktop settings
 dconf load / < dconf-settings
