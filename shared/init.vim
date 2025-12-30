@@ -1,3 +1,4 @@
+" Must run PlugInstall
 call plug#begin()
 
 " Plug 'https://github.com/vim-scripts/taglist.vim'
