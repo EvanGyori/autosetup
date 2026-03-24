@@ -22,8 +22,7 @@ lua require('mini.files').setup()
 lua require('mini.move').setup()
 nnoremap <silent> q :lua MiniFiles.open()<CR>
 
-" Only on Windows
-"colorscheme habamax
+colorscheme habamax
 
 " Fixes border issues in mini.files
 lua vim.api.nvim_set_hl(0, "FloatBorder", { link = "Normal" })
@@ -52,7 +51,7 @@ nnoremap o o<Esc>
 nnoremap O O<Esc>
 
 " Make x delete an empty line
-nnoremap <silent> x :execute (getline('.') == '':h :: ? 'normal! dd' : 'normal! x')<CR>
+nnoremap <silent> x :execute (getline('.') == '' ? 'normal! dd' : 'normal! x')<CR>
 
 noremap 0 <nop>
 noremap ^ <nop>

@@ -4,7 +4,6 @@ apt update
 apt upgrade -y
 sudo apt autoremove -y
 
-sudo apt install -y neovim
 sudo apt install -y git
 sudo apt install -y cmake
 sudo apt install -y universal-ctags
@@ -31,6 +30,10 @@ git config --global user.name "Evan Gyori"
 git config --global user.email "evangyori@gmail.com"
 git config --global core.editor nvim
 git config --global alias.history "log --all --oneline --graph"
+
+# Install latest neovim
+sudo wget https://github.com/neovim/neovim/releases/download/v0.11.6/nvim-linux-x86_64.appimage -O "/usr/local/bin/nvim"
+sudo chmod +x "/usr/local/bin/nvim"
 
 # Outdated version
 # sudo apt install -y libglfw3-dev
