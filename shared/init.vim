@@ -57,7 +57,7 @@ noremap 0 <nop>
 noremap ^ <nop>
 noremap $ <nop>
 noremap y <nop>
-noremap p <nop>
+"noremap p <nop>
 
 noremap H ^
 noremap J L
