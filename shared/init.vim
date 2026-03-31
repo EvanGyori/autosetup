@@ -34,6 +34,8 @@ set shiftwidth=4
 
 set linebreak
 
+set fo=
+
 " g0 - public: and private: aren't indented
 " N-s - stuff inside namespaces aren't indented
 " (s - After an unclosed parenthesis, indent one tab rather than two
