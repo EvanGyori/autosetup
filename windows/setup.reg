@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+; --- Files ---
+[HKEY_CLASSES_ROOT\*\shell\Open With Neovide]
+@="Open With Neovide"
+"Icon"="neovide.exe"
+
+[HKEY_CLASSES_ROOT\*\shell\Open With Neovide\command]
+@="\"D:\\Manual Installs\\Apps\\neovide\\neovide.exe\" \"%1\""
+
+; --- Folder background ---
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open Neovide]
+@="Open Neovide"
+"Icon"="neovide.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open Neovide\command]
+@="\"D:\\Manual Installs\\Apps\\neovide\\neovide.exe\" \"%V\""

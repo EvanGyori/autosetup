@@ -16,12 +16,16 @@ Plug 'https://github.com/fxn/vim-monochrome'
 " mini
 Plug 'https://github.com/nvim-mini/mini.nvim'
 
+"Plug 'https://github.com/dstein64/nvim-scrollview'
+"Plug 'https://github.com/karb94/neoscroll.nvim'
+
 call plug#end()
 
 lua require('mini.files').setup()
 lua require('mini.move').setup()
 nnoremap <silent> q :lua MiniFiles.open()<CR>
 
+" Only on Windows
 colorscheme habamax
 
 " Fixes border issues in mini.files
@@ -34,14 +38,12 @@ set shiftwidth=4
 
 set linebreak
 
-set fo=
-
 " g0 - public: and private: aren't indented
 " N-s - stuff inside namespaces aren't indented
 " (s - After an unclosed parenthesis, indent one tab rather than two
 set cino=g0N-s(s
 
-autocmd FileType c,cpp setlocal fo=c
+autocmd BufReadPost * setlocal fo=
 set textwidth=60
 
 nnoremap <silent> ; :TagbarToggle<CR>
@@ -67,8 +69,11 @@ noremap K H
 noremap L $
 
 noremap <silent> <C-s> :w<CR>
-vnoremap <C-x> <C-c>x
-vnoremap <C-c> "+ygv
+vnoremap <C-x> "+x
+vnoremap <C-c> "+y
+nnoremap <C-v> "+p
+inoremap <C-v> <C-r>+
+cnoremap <C-v> <C-r>+
 
 noremap Q <C-6>
 
