@@ -68,12 +68,20 @@ noremap J L
 noremap K H
 noremap L $
 
+noremap <MiddleMouse> <nop>
+noremap <2-MiddleMouse> <nop>
+noremap <3-MiddleMouse> <nop>
+noremap <4-MiddleMouse> <nop>
+noremap! <MiddleMouse> <nop>
+noremap! <2-MiddleMouse> <nop>
+noremap! <3-MiddleMouse> <nop>
+noremap! <4-MiddleMouse> <nop>
+
 noremap <silent> <C-s> :w<CR>
 vnoremap <C-x> "+x
 vnoremap <C-c> "+y
-nnoremap <C-v> "+p
-inoremap <C-v> <C-r>+
-cnoremap <C-v> <C-r>+
+noremap <C-v> "+p
+noremap! <C-v> <C-r>+
 
 noremap Q <C-6>
 
